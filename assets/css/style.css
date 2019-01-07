@@ -1,0 +1,28 @@
+body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: #47494b;
+}
+
+#addTrainBtn {
+    color: black;
+    font-weight: bold;
+    background-color: aquamarine;
+}
+
+#addTrainBtn:hover {
+        color:rgb(198, 0, 139); 
+        text-decoration:none; 
+        cursor:pointer;  
+}
+
+#display-header {
+    background-color: aquamarine;
+    font-weight: bold;
+}
+
+hr {
+    color: aquamarine;
+    border-style: solid none;
+    border-width: 1px 0;
+    margin: 15px 0;
+}

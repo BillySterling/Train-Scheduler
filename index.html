@@ -19,7 +19,7 @@
 <!--   <div class="jumbotron" style="background-color: aquamarine"> --> 
     <div class="jumbotron">
         <h1 class="text-center">TRAIN SCHEDULES</h1>
-        <h3 class="text-center">View and Add Train Schedules</h3>
+        <h2 class="text-center">View and Add Train Schedules</h2>
     </div>
 
     <div class="container">
@@ -28,19 +28,19 @@
 
     <div class="card">
         <div class="card-header" id="display-header">CURRENT TRAIN SCHEDULE</div>
-        <table class="table" id="current-schedule">
+        <table class="table table-striped" id="current-schedule">
             <thead>
                 <tr>
-                <th>Train Name</th>
-                <th>Destination</th>
-                <th>Run Frequency (minutes)</th>
-                <th>Next Arrival</th>
-                <th>Minutes Away</th>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Run Frequency (minutes)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
                 </tr>
             </thead>
             <tbody>
             </tbody>
-            </table>
+        </table>
     </div>
 
     <div class="container">
@@ -49,49 +49,46 @@
 
     <div class="card">
         <div class="card-header" id="display-header">ADD A SCHEDULE</div>
-        <table class="table" id="new-schedule">
         <div class="card-body">
             <form>
                 <div class="form-group">
                     <label for="trainName">Train Name</label>
-                    <input type="text" class="form-control" id="trainName" placeholder="Enter Train Name">
+                    <input type="text" class="form-control" id="trainName" placeholder="Enter Train Name" required>
                 </div>
                 <div class="form-group">
                     <label for="destination">Destination</label>
-                    <input type="text" class="form-control" id="destination" placeholder="Enter Destination">
+                    <input type="text" class="form-control" id="destination" placeholder="Enter Destination" required>
                 </div>
                 <div class="form-group">
                     <label for="firstTime">First Train Time (HH:mm - 24 Hour Clock)</label>
-                    <input type="text" class="form-control" id="firstTime" placeholder="HH:mm">
+                    <input type="text" class="form-control" id="firstTime" placeholder="HH:mm" required>
                 </div>   
                 <div class="form-group">
                     <label for="frequency">Frequency (Minutes)</label>
-                    <input type="text" class="form-control" id="frequency" placeholder="0">
+                    <input type="text" class="form-control" id="frequency" placeholder="0" required>
                 </div>    
                 <button type="submit" id ="addTrainBtn" class="btn btn-primary">Submit</button>
             </form>            
         </div>
-    
-        <div class="fixed-bottom text-right">
-            <footer>
-                 <p>&copy; 2019 Billy Sterling; Photo by <a href="https://www.pexels.com/@nord6"> Tina Nord </a></p>
-            </footer>
-        </div>
-  </div>
+    </div>    
 
-    <!-- jQuery JS -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Bootstrap -->
-    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
-    <!-- Moment JS -->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <!-- train schedule app -->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <div class="fixed-bottom text-right">
+        <footer>
+            <p>&copy; 2019 Billy Sterling; Photo by <a href="https://www.pexels.com/@nord6"> Tina Nord </a></p>
+        </footer>
+    </div>
+
+</div>    
+    <!-- Bootstrap & jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+<!-- Moment JS -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<!-- train schedule app -->
+<script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
 </html>	

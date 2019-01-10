@@ -63,11 +63,13 @@ $(document).ready(function() {
             console.log(childSnapshot.val().destination);
             console.log(childSnapshot.val().firstTime);
             console.log(childSnapshot.val().frequency);
+            console.log(childSnapshot.key);
 
             var newName = childSnapshot.val().trainName;
             var newDestination = childSnapshot.val().destination;
             var newTrainTime = childSnapshot.val().firstTime;
             var tFrequency = childSnapshot.val().frequency;
+            var key = childSnapshot.key;
 
             // First Time (pushed back 1 year to make sure it comes before current time)
             var firstTimeConverted = moment(newTrainTime, "HH:mm").subtract(1, "years");

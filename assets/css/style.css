@@ -3,6 +3,13 @@ body {
     background-color: #47494b;
 }
 
+.jumbotron {
+    background-image: url("../images/railroad.jpg"); 
+    background-color: darkgray;
+    background-size: cover;
+    color: aquamarine;
+}
+
 #addTrainBtn {
     color: black;
     font-weight: bold;
@@ -10,14 +17,24 @@ body {
 }
 
 #addTrainBtn:hover {
-        color:rgb(198, 0, 139); 
+        color:rgb(198, 0, 33); 
         text-decoration:none; 
         cursor:pointer;  
 }
 
+#dispSched {
+    font-weight: bold;
+}
 #display-header {
     background-color: aquamarine;
     font-weight: bold;
+}
+
+footer {
+    height: auto;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
 }
 
 hr {

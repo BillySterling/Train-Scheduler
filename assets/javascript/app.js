@@ -27,12 +27,12 @@ $(document).ready(function() {
         var regex = /^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/;
         var timeAudit = regex.test(firstTime);
 
-        console.log("-------- Input Values ----------");
-        console.log(trainName);
-        console.log(destination);
-        console.log(firstTime);
-        console.log(frequency);
-        console.log("time audit: " + timeAudit);
+        //console.log("-------- Input Values ----------");
+        //console.log(trainName);
+        //console.log(destination);
+        //console.log(firstTime);
+        //console.log(frequency);
+        //console.log("time audit: " + timeAudit);
 
         debugger;
         if (trainName !== "" && destination !== "" && frequency !== 0 && frequency !== "" && timeAudit) {
@@ -54,7 +54,7 @@ $(document).ready(function() {
             $("#firstTime").val("");
             $("#frequency").val(""); 
         } else {
-            console.log("INPUT ERROR!!!")
+            //console.log("INPUT ERROR!!!")
             $("#errModal").modal()
         }
     });

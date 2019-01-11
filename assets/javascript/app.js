@@ -55,6 +55,7 @@ $(document).ready(function() {
             $("#frequency").val(""); 
         } else {
             console.log("INPUT ERROR!!!")
+            $("#errModal").modal()
         }
     });
 

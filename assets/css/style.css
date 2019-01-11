@@ -3,12 +3,18 @@ body {
     background-color: #47494b;
 }
 
+a {
+    color: aquamarine;
+    text-decoration: none;
+}
+
 .jumbotron {
     background-image: url("../images/railroad.jpg"); 
     background-color: darkgray;
     background-size: cover;
     /*color: aquamarine; */
     color: whitesmoke;
+    text-shadow: 4px 1px 1px rgb(80, 182, 151);
 }
 
 #addTrainBtn {
@@ -33,9 +39,8 @@ body {
 
 footer {
     height: auto;
-    color: black;
-    font-size: 14px;
-    text-decoration: none;
+    color: aquamarine;
+    font-size: 12px;
 }
 
 hr {

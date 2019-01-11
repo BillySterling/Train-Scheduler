@@ -23,28 +23,39 @@ $(document).ready(function() {
         var destination = $("#destination").val().trim();
         var firstTime = $("#firstTime").val().trim();
         var frequency = $("#frequency").val().trim();
+        // regex for departure time audit
+        var regex = /^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/;
+        var timeAudit = regex.test(firstTime);
 
-        //console.log(trainName);
-        //console.log(destination);
-        //console.log(firstTime);
-        //console.log(frequency);
+        console.log("-------- Input Values ----------");
+        console.log(trainName);
+        console.log(destination);
+        console.log(firstTime);
+        console.log(frequency);
+        console.log("time audit: " + timeAudit);
 
-        var newTrain = {
-            trainName: trainName,
-            destination: destination,
-            firstTime: firstTime,
-            frequency: frequency
+        debugger;
+        if (trainName !== "" && destination !== "" && frequency !== 0 && frequency !== "" && timeAudit) {
+
+            var newTrain = {
+                trainName: trainName,
+                destination: destination,
+                firstTime: firstTime,
+                frequency: frequency
+            }
+
+            console.log(newTrain);
+
+            dataRef.ref().push(newTrain);
+
+            // clear inputs
+            $("#trainName").val("");
+            $("#destination").val("");
+            $("#firstTime").val("");
+            $("#frequency").val(""); 
+        } else {
+            console.log("INPUT ERROR!!!")
         }
-
-        console.log(newTrain);
-
-        dataRef.ref().push(newTrain);
-
-        // clear inputs
-        $("#trainName").val("");
-        $("#destination").val("");
-        $("#firstTime").val("");
-        $("#frequency").val(0);
     });
 
         // Firebase watcher + initial loader
@@ -98,4 +109,4 @@ $(document).ready(function() {
         }, function(errorObject) {
             console.log("Errors handled: " + errorObject.code);
         });
-});
+}); 

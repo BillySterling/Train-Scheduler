@@ -15,21 +15,14 @@ $(document).ready(function() {
     // Create a variable to reference the database
     var dataRef = firebase.database();
 
-    // variables
-
-    var trainName = "";
-    var destination = "";
-    var firstTime = 0;
-    var frequency = 0;
-
-    $("#addTrainBtn").on("click", function(){
+    $("#addTrainBtn").on("click", function(event){
         event.preventDefault();
         //console.log("Clicked")
         
-        trainName = $("#trainName").val().trim();
-        destination = $("#destination").val().trim();
-        firstTime = $("#firstTime").val().trim();
-        frequency = $("#frequency").val().trim();
+        var trainName = $("#trainName").val().trim();
+        var destination = $("#destination").val().trim();
+        var firstTime = $("#firstTime").val().trim();
+        var frequency = $("#frequency").val().trim();
 
         //console.log(trainName);
         //console.log(destination);

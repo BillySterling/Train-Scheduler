@@ -34,7 +34,6 @@ $(document).ready(function() {
         //console.log(frequency);
         //console.log("time audit: " + timeAudit);
 
-        debugger;
         if (trainName !== "" && destination !== "" && frequency !== 0 && frequency !== "" && timeAudit) {
 
             var newTrain = {

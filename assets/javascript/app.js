@@ -44,7 +44,7 @@ $(document).ready(function() {
                 frequency: frequency
             }
 
-            console.log(newTrain);
+            //console.log(newTrain);
 
             dataRef.ref().push(newTrain);
 
@@ -63,12 +63,12 @@ $(document).ready(function() {
         dataRef.ref().on("child_added", function(childSnapshot) {
 
             // Log everything that's coming out of snapshot
-            console.log("childsnapshot" + childSnapshot);
-            console.log(childSnapshot.val().trainName);
-            console.log(childSnapshot.val().destination);
-            console.log(childSnapshot.val().firstTime);
-            console.log(childSnapshot.val().frequency);
-            console.log(childSnapshot.key);
+            //console.log("childsnapshot" + childSnapshot);
+            //console.log(childSnapshot.val().trainName);
+            //console.log(childSnapshot.val().destination);
+            //console.log(childSnapshot.val().firstTime);
+            //console.log(childSnapshot.val().frequency);
+            //console.log(childSnapshot.key);
 
             var newName = childSnapshot.val().trainName;
             var newDestination = childSnapshot.val().destination;
@@ -78,28 +78,28 @@ $(document).ready(function() {
 
             // First Time (pushed back 1 year to make sure it comes before current time)
             var firstTimeConverted = moment(newTrainTime, "HH:mm").subtract(1, "years");
-            console.log("CONV TRAIN TIME: " + firstTimeConverted);
+            //console.log("CONV TRAIN TIME: " + firstTimeConverted);
 
             // Current Time
             var currentTime = moment();
-            console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+            //console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
 
             // Difference between the times
             var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-            console.log("DIFFERENCE IN TIME: " + diffTime);
+            //console.log("DIFFERENCE IN TIME: " + diffTime);
 
             // Time apart (remainder)
             var tRemainder = diffTime % tFrequency;
-            console.log("TIME REMAINDER: " + tRemainder);
+            //console.log("TIME REMAINDER: " + tRemainder);
 
             //minutes until  train
             var tMinutesTillTrain = tFrequency - tRemainder;
-            console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+            //console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
             //next train
             var nextTrain = moment().add(tMinutesTillTrain, "minutes");
             var nextTrainArr = moment(nextTrain).format("HH:mm");
-            console.log("ARRIVAL TIME: " + nextTrainArr);
+            //console.log("ARRIVAL TIME: " + nextTrainArr);
             
             // set up schedule display
             var schedLine = "<tr><td id='dispSched'>" + newName + "</td><td id='dispSched'>" + newDestination + "</td><td id='dispSched'>" + tFrequency + "</td><td id='dispSched'>" + nextTrainArr + "</td><td id='dispSched'>" + tMinutesTillTrain + "</td></tr>";

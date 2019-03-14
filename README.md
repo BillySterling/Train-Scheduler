@@ -10,7 +10,7 @@ JavaScript, JQuery, and Firebase database.
 
 ### Screenshot
 
-![Landing Page Image](screenshot.png)
+![Landing Page Image](Screenshot.png)
 
 
 https://billysterling.github.io/Train-Scheduler/

@@ -1,0 +1,5 @@
+node_modules
+.env
+.eslintre.json
+.eslintrc.json
+.DS_Store

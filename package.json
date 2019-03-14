@@ -1,0 +1,27 @@
+{
+  "name": "train-scheduler",
+  "version": "1.0.0",
+  "description": "train schedule application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BillySterling/Train-Scheduler.git"
+  },
+  "keywords": [
+    "Firebase",
+    "jQuery",
+    "JavaScript"
+  ],
+  "author": "Billy Sterling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BillySterling/Train-Scheduler/issues"
+  },
+  "homepage": "https://github.com/BillySterling/Train-Scheduler#readme",
+  "devDependencies": {
+    "eslint": "^5.15.1"
+  }
+}
